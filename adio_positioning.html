@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abu Dhabi investment discourse: where ADIO sits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f1;--panel:#fff;--ink:#1a2a2e;--mute:#5d6d70;--line:#d5dcd8;--teal:#0d6b70;--gold:#b9812a;--on:#fff;--band:#e8eeea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1c;--panel:#16252a;--ink:#e6eeee;--mute:#93a6a8;--line:#2a3d42;--teal:#4db3ad;--gold:#e0a94f;--on:#06222a;--band:#1b2d32}}
+:root[data-theme="dark"]{--bg:#0f1a1c;--panel:#16252a;--ink:#e6eeee;--mute:#93a6a8;--line:#2a3d42;--teal:#4db3ad;--gold:#e0a94f;--on:#06222a;--band:#1b2d32}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+main{max-width:920px;margin:0 auto;padding:28px 18px 56px}
+h1,h2{font-family:"Source Serif 4",Georgia,serif;font-weight:700;line-height:1.15;margin:0}
+h1{font-size:clamp(26px,5vw,38px);max-width:22ch}
+h2{font-size:22px;margin-bottom:6px}
+p{margin:0 0 10px;max-width:68ch}.lede{color:var(--mute);font-size:16px;margin-top:12px}
+section{margin-top:44px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.sub{color:var(--mute);font-size:13px;margin-bottom:12px}
+.scroll{overflow-x:auto}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:"IBM Plex Sans",system-ui,sans-serif;fill:var(--ink)}
+table.hm{border-collapse:separate;border-spacing:3px;min-width:640px;width:100%}
+.hm th{font-weight:500;font-size:12.5px;color:var(--mute);padding:4px 6px;text-align:center}
+.hm th.r{text-align:left;color:var(--ink);font-size:13px;white-space:nowrap}
+.hm td{height:40px;text-align:center;font-weight:600;border-radius:5px;background:var(--band);min-width:76px}
+.bars div.row{display:grid;grid-template-columns:150px 1fr 60px;gap:10px;align-items:center;margin:5px 0;font-size:13.5px}
+.bars .b{height:14px;border-radius:3px;background:var(--teal)}.bars .t{background:var(--band);border-radius:3px}
+.bars small{color:var(--mute)}
+ul.f{padding-left:0;list-style:none;margin:0}
+ul.f li{padding:12px 0;border-top:1px solid var(--line)}ul.f li:first-child{border-top:0}
+ul.f b{display:block;margin-bottom:2px}
+table.r{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+.r th,.r td{text-align:left;padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}.r th{color:var(--mute);font-weight:500}
+a{color:var(--teal)}
+.note{font-size:13px;color:var(--mute);border-left:3px solid var(--gold);padding-left:12px;margin-top:14px}
+@media(max-width:560px){.bars div.row{grid-template-columns:110px 1fr 50px}}
+</style></head><body><main>
+<header>
+<h1>Abu Dhabi's investment conversation is about finance. ADIO's is about factories, food and health.</h1>
+<p class="lede">Text analysis of 93 search results (title and snippet). After removing duplicates and off-topic pages, 50 rows remain; 8 of them mention ADIO or the Abu Dhabi Investment Office.</p>
+</header>
+
+<section><h2>Positioning quadrant</h2>
+<p class="sub">Across the whole set, each sector's share of rows (horizontal) against ADIO's share of that sector's rows (vertical). Bubble size is the number of ADIO rows in the sector.</p>
+<div class="card"><svg id="q" viewBox="0 0 760 520" role="img" aria-label="Quadrant of sectors by discourse volume and ADIO share"></svg></div>
+<p class="note">ADIO's overall share is 16% of on-topic rows (8 of 50), so the dashed line marks over- versus under-indexing. Manufacturing, agrifood and automotive rest largely on one Gulf Business interview, so treat them as signals rather than proof.</p>
+</section>
+
+<section><h2>Thematic heatmap</h2>
+<p class="sub">Rows mentioning each sector, split by who the row is about. Cell shade is the share of that column's rows; the number is the row count. A row can carry several sectors and several lenses.</p>
+<div class="card scroll"><table class="hm" id="hm"></table></div>
+</section>
+
+<section><h2>Keyword frequency</h2>
+<p class="sub">Number of rows containing each term (title plus snippet). Entity names such as "Investment Office" and "Falcon Economy" are excluded.</p>
+<div class="card bars" id="kw"></div>
+<p class="note">Fintech appears in 3 rows and agrifood in 1, so neither dominates. The most common general terms are capital (17 rows), global (14) and sustainable (10): the discourse is framed around capital and reach, not one sector.</p>
+</section>
+
+<section><h2>How ADIO is described</h2>
+<div class="card"><ul class="f">
+<li><b>An ecosystem builder for industry</b>A Gulf Business interview (23 Sept 2026) presents ADIO as connecting financing, logistics, suppliers and talent so companies can plug in, with automotive, food manufacturing and import substitution as examples.</li>
+<li><b>A deal-maker with global corporates</b>Framework agreements with Bayer (health and life sciences) and Prudential Financial (retirement, income and reinsurance).</li>
+<li><b>A convenor of capital</b>A July 2025 partnership with the Emirates Family Office Association to attract global family offices, and RealAssetX with ADGM Academy and PGIM.</li>
+<li><b>A cross-sector cluster partner</b>Co-led the HELM health and longevity cluster with ADDED and the Department of Health.</li>
+<li><b>An arm of ADDED with a new brand</b>Described as the ADDED arm driving diversification and sustainable growth, and a "Beyond Capital" rebrand tied to the Falcon Economy vision.</li>
+</ul></div>
+<p class="note">Global offices: none of the 8 ADIO rows mentions overseas offices or locations. Global reach shows up through partners in Germany and the US, not through an office network. A follow-up search on ADIO's international offices would fill this gap.</p>
+<div class="card scroll" style="margin-top:14px"><table class="r" id="ar"><tr><th>Row</th><th>Title</th><th>Source</th></tr></table></div>
+</section>
+
+<section><h2>Method</h2>
+<p class="sub">93 rows (71 web, 22 news) reduced to 89 after removing duplicate titles, then 50 after dropping off-topic pages (encyclopaedia entries, unrelated market reports, travel and listings). Sectors are keyword-matched on the first 6,000 characters of each row; ADIO is matched on the full text. With this few rows, differences of one or two rows are not meaningful.</p></section>
+</main>
+<script>
+const D={"N": 50, "NA": 8, "raw": 93, "uniq": 89, "sc": {"Financial services & capital": 23, "AI & digital tech": 10, "Advanced manufacturing & industry": 1, "Automotive & mobility": 4, "Energy, water & clean power": 11, "Health & life sciences": 7, "Agrifood & food security": 2, "Real estate & infrastructure": 10, "Tourism, hospitality & culture": 10, "Trade & global partnerships": 13}, "sa": {"Financial services & capital": 4, "AI & digital tech": 2, "Advanced manufacturing & industry": 1, "Automotive & mobility": 2, "Energy, water & clean power": 2, "Health & life sciences": 2, "Agrifood & food security": 2, "Real estate & infrastructure": 3, "Tourism, hospitality & culture": 1, "Trade & global partnerships": 2}, "mat": {"Financial services & capital": {"ADIO": 4, "ADGM / ADFW": 7, "Sovereign funds": 6, "ADDED / govt": 8, "Third-party": 8}, "AI & digital tech": {"ADIO": 2, "ADGM / ADFW": 2, "Sovereign funds": 5, "ADDED / govt": 3, "Third-party": 4}, "Advanced manufacturing & industry": {"ADIO": 1, "ADGM / ADFW": 0, "Sovereign funds": 0, "ADDED / govt": 0, "Third-party": 0}, "Automotive & mobility": {"ADIO": 2, "ADGM / ADFW": 0, "Sovereign funds": 1, "ADDED / govt": 1, "Third-party": 2}, "Energy, water & clean power": {"ADIO": 2, "ADGM / ADFW": 1, "Sovereign funds": 3, "ADDED / govt": 3, "Third-party": 5}, "Health & life sciences": {"ADIO": 2, "ADGM / ADFW": 1, "Sovereign funds": 0, "ADDED / govt": 3, "Third-party": 2}, "Agrifood & food security": {"ADIO": 2, "ADGM / ADFW": 0, "Sovereign funds": 1, "ADDED / govt": 1, "Third-party": 0}, "Real estate & infrastructure": {"ADIO": 3, "ADGM / ADFW": 3, "Sovereign funds": 4, "ADDED / govt": 4, "Third-party": 2}, "Tourism, hospitality & culture": {"ADIO": 1, "ADGM / ADFW": 0, "Sovereign funds": 2, "ADDED / govt": 3, "Third-party": 7}, "Trade & global partnerships": {"ADIO": 2, "ADGM / ADFW": 0, "Sovereign funds": 0, "ADDED / govt": 3, "Third-party": 8}}, "tot": {"ADIO": 8, "ADGM / ADFW": 7, "Sovereign funds": 7, "ADDED / govt": 15, "Third-party": 26}, "kw": {"fintech": [3, 3], "agrifood / agri-food": [1, 1], "food": [2, 7], "ai": [7, 20], "health / healthcare": [6, 8], "biotech / life sciences": [1, 2], "energy": [7, 10], "clean power / renewables": [2, 4], "infrastructure": [8, 18], "manufacturing / industrial": [1, 28], "automotive": [1, 4], "private equity": [2, 4], "insurance / retirement": [3, 6], "asset management": [2, 8], "sukuk": [1, 2], "family offices": [1, 8], "tourism": [3, 5], "real estate": [3, 5], "data centres": [1, 2]}, "kwa": {"fintech": 0, "agrifood / agri-food": 1, "food": 2, "ai": 2, "health / healthcare": 2, "biotech / life sciences": 1, "energy": 0, "clean power / renewables": 0, "infrastructure": 3, "manufacturing / industrial": 1, "automotive": 1, "private equity": 1, "insurance / retirement": 1, "asset management": 1, "sukuk": 1, "family offices": 1, "tourism": 0, "real estate": 2, "data centres": 1}, "adio": [{"i": 0, "title": "Plug and scale: how ADIO is wiring Abu Dhabi’s industry into ...", "url": "https://gulfbusiness.com/en/2026/abu-dhabi/plug-and-scale-how-adio-is-wiring-abu-dhabis-industry-into-one-ecosystem/", "src": "web"}, {"i": 3, "title": "ADIO signs strategic deal with German biotech company Bayer", "url": "https://tradearabia.com/News/486088/ADIO-signs-strategic-deal-with-German-biotech-company-Bayer", "src": "web"}, {"i": 5, "title": "adio abu dhabi: Latest News & Videos, Photos about adio abu ...", "url": "https://economictimes.indiatimes.com/topic/adio-abu-dhabi", "src": "web"}, {"i": 6, "title": "ADGM reinforces Abu Dhabi’s position as global financial hub", "url": "https://www.mediaoffice.abudhabi/en/economy/adgm-reinforces-abu-dhabis-position-as-global-financial-hub/", "src": "web"}, {"i": 12, "title": "The 10 Most Active UAE Family Offices in Private Equity ...", "url": "https://dubaiinvestorslist.com/the-10-most-active-uae-family-offices-in-private-equity-and-real-assets-2026/", "src": "web"}, {"i": 26, "title": "Leadership Team", "url": "https://www.investwithabudhabi.com/en/about/leadership", "src": "web"}, {"i": 28, "title": "Abu Dhabi is signalling that its next growth chapter ...", "url": "https://www.facebook.com/smashibusiness/posts/abu-dhabi-is-signalling-that-its-next-growth-chapter-is-about-more-than-attracti/1284090287124486/", "src": "web"}, {"i": 77, "title": "Abu Dhabi Investment Office and Prudential Financial Inc sign strategic collaboration to advance long-term investment, retirement savings, income, and reinsurance", "url": "https://www.mediaoffice.abudhabi/en/economy/abu-dhabi-investment-office-and-prudential-financial-inc-sign-strategic-collaboration-to-advance-long-term-investment-retirement-savings-income-and-reinsurance/", "src": "news"}], "sectors": ["Financial services & capital", "AI & digital tech", "Advanced manufacturing & industry", "Automotive & mobility", "Energy, water & clean power", "Health & life sciences", "Agrifood & food security", "Real estate & infrastructure", "Tourism, hospitality & culture", "Trade & global partnerships"], "actors": ["ADIO", "ADGM / ADFW", "Sovereign funds", "ADDED / govt", "Third-party"]};
+const $=s=>document.querySelector(s);
+const short={'Financial services & capital':'Financial services','AI & digital tech':'AI & digital','Advanced manufacturing & industry':'Advanced manufacturing','Automotive & mobility':'Automotive','Energy, water & clean power':'Energy & water','Health & life sciences':'Health & life sciences','Agrifood & food security':'Agrifood','Real estate & infrastructure':'Real estate & infra','Tourism, hospitality & culture':'Tourism & culture','Trade & global partnerships':'Trade & partnerships'};
+// quadrant
+(function(){
+const W=760,H=520,L=64,R=24,T=26,B=56,xm=50,ym=115,X=v=>L+v/xm*(W-L-R),Y=v=>T+(1-v/ym)*(H-T-B);
+const xc=15,yc=D.NA/D.N*100;let s='';
+s+=`<rect x="${X(xc)}" y="${T}" width="${W-R-X(xc)}" height="${Y(yc)-T}" fill="var(--teal)" opacity=".07"/>`;
+s+=`<rect x="${L}" y="${T}" width="${X(xc)-L}" height="${Y(yc)-T}" fill="var(--gold)" opacity=".10"/>`;
+[0,25,50,75,100].forEach(v=>{s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="12" style="fill:var(--mute)">${v}%</text>`});
+[0,10,20,30,40,50].forEach(v=>{s+=`<text x="${X(v)}" y="${H-B+18}" text-anchor="middle" font-size="12" style="fill:var(--mute)">${v}%</text>`});
+s+=`<line x1="${X(xc)}" x2="${X(xc)}" y1="${T}" y2="${H-B}" stroke="var(--mute)" stroke-dasharray="4 4"/><line x1="${L}" x2="${W-R}" y1="${Y(yc)}" y2="${Y(yc)}" stroke="var(--mute)" stroke-dasharray="4 4"/>`;
+s+=`<text x="${L+8}" y="${T+16}" font-size="12.5" font-weight="600" style="fill:var(--gold)">ADIO niches</text>`;
+s+=`<text x="${W-R-8}" y="${T+16}" text-anchor="end" font-size="12.5" font-weight="600" style="fill:var(--teal)">Shared ground</text>`;
+s+=`<text x="${W-R-8}" y="${H-B-8}" text-anchor="end" font-size="12.5" font-weight="600" style="fill:var(--mute)">Big conversation, ADIO light</text>`;
+s+=`<text x="${W/2}" y="${H-10}" text-anchor="middle" font-size="12.5" style="fill:var(--mute)">Share of all on-topic rows mentioning the sector</text>`;
+s+=`<text transform="translate(16 ${(T+H-B)/2}) rotate(-90)" text-anchor="middle" font-size="12.5" style="fill:var(--mute)">ADIO share of the sector's rows</text>`;
+const off={'Advanced manufacturing & industry':[14,-14,'start'],'Agrifood & food security':[16,26,'start'],'Automotive & mobility':[16,4,'start'],'Health & life sciences':[0,-24,'middle'],'Financial services & capital':[0,-26,'middle'],'AI & digital tech':[-16,-14,'end'],'Energy, water & clean power':[16,16,'start'],'Real estate & infrastructure':[-16,-16,'end'],'Trade & global partnerships':[0,-20,'middle'],'Tourism, hospitality & culture':[0,28,'middle']};
+D.sectors.forEach(k=>{const x=D.sc[k]/D.N*100,y=D.sa[k]/D.sc[k]*100,r=6+3*D.sa[k],hi=x<xc&&y>yc;
+const [dx,dy,a]=off[k];
+s+=`<circle cx="${X(x)}" cy="${Y(y)}" r="${r}" fill="${hi?'var(--gold)':'var(--teal)'}" opacity=".85"/><text x="${X(x)+dx}" y="${Y(y)+dy}" text-anchor="${a}" font-size="12.5">${short[k]}</text>`});
+$('#q').innerHTML=s})();
+// heatmap
+(function(){let h='<tr><th></th>'+D.actors.map(a=>`<th>${a}<br><small>${D.tot[a]} rows</small></th>`).join('')+'</tr>';
+D.sectors.forEach(k=>{h+=`<tr><th class="r">${short[k]}</th>`+D.actors.map(a=>{const v=D.mat[k][a],p=v/D.tot[a];
+const bg=v?`background:color-mix(in srgb,var(--teal) ${Math.round(12+80*p)}%,transparent);`:'';
+const c=p>.5?'color:var(--on);':'';return `<td style="${bg}${c}">${v||''}</td>`}).join('')+'</tr>'});
+$('#hm').innerHTML=h})();
+// keywords
+(function(){const e=Object.entries(D.kw).sort((a,b)=>b[1][0]-a[1][0]||b[1][1]-a[1][1]).slice(0,14),m=e[0][1][0];
+$('#kw').innerHTML=e.map(([k,v])=>`<div class="row"><span>${k}</span><div class="t"><div class="b" style="width:${v[0]/m*100}%"></div></div><span>${v[0]} <small>rows</small></span></div>`).join('')})();
+// ADIO table
+$('#ar').innerHTML+=D.adio.map(r=>`<tr><td>${r.i}</td><td><a href="${r.url}" target="_blank" rel="noopener">${r.title.replace(/</g,'&lt;')}</a></td><td>${r.src}</td></tr>`).join('');
+</script></body></html>
